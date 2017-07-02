@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+ /*// @import "bootstrap";*/
+.carousel-inner img {
+  max-height: 550px;
+}
