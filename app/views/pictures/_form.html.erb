@@ -21,6 +21,11 @@
     <%= form.label :url %>
     <%= form.text_field :url, id: :picture_url %>
   </div>
+  <div class="field">
+
+  <%= form.file_field :image %>
+
+</div>
 
   <div class="field">
     <%= form.file_field :image %>
@@ -29,4 +34,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+<!-- <% end %> -->
 <% end %>
