@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+  before_action :set_picture, only: [ :show, :edit, :update, :destroy]
 
   # GET /pictures
   # GET /pictures.json
@@ -10,6 +10,8 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.json
   def show
+    # replaced this code with call to set_picture method that is called by before_action
+    # @picture = Picture.find(params[:id])
   end
 
   # GET /pictures/new
@@ -24,6 +26,7 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
+    puts "*******hello world******"
     @picture = Picture.new(picture_params)
 
     respond_to do |format|
@@ -69,6 +72,7 @@ class PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      params.require(:picture).permit(:title, :url)
+      puts "*********I am at pp******"
+      params.require(:picture).permit(:title, :url, :image)
     end
 end
