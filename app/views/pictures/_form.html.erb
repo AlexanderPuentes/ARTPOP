@@ -1,4 +1,5 @@
-<%= form_with(model: picture, local: true) do |form| %>
+<%= form_for @pictures, html: { multipart: true } do |form| %>
+<!-- <%= form_with(model: picture, local: true) do |form| %> -->
   <% if picture.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
@@ -20,8 +21,14 @@
     <%= form.label :url %>
     <%= form.text_field :url, id: :picture_url %>
   </div>
+  <div class="field">
+
+  <%= form.file_field :image %>
+
+</div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+<!-- <% end %> -->
 <% end %>
