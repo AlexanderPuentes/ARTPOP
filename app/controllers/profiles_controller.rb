@@ -18,7 +18,6 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
-    "***hello world****"
     @profile = Profile.new
   end
 

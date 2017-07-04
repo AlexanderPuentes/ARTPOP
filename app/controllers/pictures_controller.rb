@@ -29,7 +29,6 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    # puts "*******hello world******"
     @picture = Picture.new(picture_params)
     @picture.user_id = current_user.id
 
@@ -78,7 +77,6 @@ class PicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def picture_params
-      # puts "*********I am at pp******"
       params.require(:picture).permit(:title, :image, :user_id)
     end
 end
