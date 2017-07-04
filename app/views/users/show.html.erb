@@ -5,8 +5,10 @@
   <% @pictures.each do |pic| %>
     <div class="profile-pic col-sm-4">
       <%= image_tag pic.image_file_name, size: "200" %>
+      <%= link_to 'Delete', {action: :destroy, id: pic.id, controller: :pictures}, method: :delete, data: { confirm: 'Are you sure?'} %>
     </div>
   <% end %>
 </div>
 
 <%= link_to "Add Picture", new_picture_path %>
+<%= link_to "Home", pictures_path %>
