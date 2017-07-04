@@ -66,6 +66,7 @@ class PicturesController < ApplicationController
       format.html { redirect_to user_path(current_user[:id]), notice: 'Picture was successfully destroyed.' }
       format.json { head :no_content }
     end
+  
   end
 
   private
