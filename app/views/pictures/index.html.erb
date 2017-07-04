@@ -10,17 +10,16 @@
       </tr>
     </thead>
 
-    <tbody>
+    <!-- <tbody>
       <% @pictures.each do |picture| %>
       <tr>
         <td><%= picture.title %></td>
-        <td><%= picture.url %></td>
         <td><%= link_to 'Show', picture %></td>
         <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
         <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
-    </tbody>
+    </tbody> -->
   </table>
 </div>
 
@@ -44,6 +43,7 @@
       <ul class="nav navbar-nav navbar-right">
         <%if user_signed_in?%>
           <li><%= link_to current_user.email, edit_user_registration_path %></a></li>
+          <li><%= link_to 'Profile', user_path(current_user[:id])%></a></li>
           <li><%= link_to 'Logout', destroy_user_session_path, method: :delete  %></a></li>
         <%else%>
           <li><%= link_to 'Sign Up', new_user_registration_path %></a></li>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="item">
-              <%=image_tag src="B&W-face.jpg", width:"100%;"%>
+              <%=image_tag src="B_W-face.jpg", width:"100%;"%>
             </div>
 
             <div class="item">
@@ -93,11 +93,11 @@
             </div>
 
             <div class="item">
-              <%= image_tag src="Red Rose.jpg", width:"100%;"%>
+              <%= image_tag src="Red_Rose.jpg", width:"100%;"%>
             </div>
 
             <div class="item">
-              <%= image_tag src="Double exposure test.png", width:"100%;"%>
+              <%= image_tag src="Double_exposure_test.png", width:"100%;"%>
             </div>
           </div>
 
@@ -131,5 +131,7 @@
 <footer class="container-fluid text-center">
   <p>   <i class="fa fa-copyright" aria-hidden="true"></i> ARTPOP! </p>
 </footer>
+
+
 
 <!-- <br> -->

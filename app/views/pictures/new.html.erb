@@ -2,4 +2,5 @@
 
 <%= render 'form', picture: @picture %>
 
-<%= link_to 'Back', pictures_path %>
+<%= link_to 'Home', pictures_path %>
+<%= link_to 'Back to Gallery', user_path(current_user[:id])%>
