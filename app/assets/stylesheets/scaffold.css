@@ -21,7 +21,8 @@ a {
 }
 
 a:visited {
-  color: #666;
+  /*color: #666;*/
+  color: white;
 }
 
 a:hover {
