@@ -4,8 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :pictures
- before_save :delete_picture, if: ->{ remove_pictre == '1' && !picture_updated_at_changed? }
-
+ 
   private
 
   def delete_avatar
