@@ -1,24 +1,15 @@
-# README
+Welcome to ARTPOP!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create your own art gallery and display your work to show them to local artists as well as see what's hot in the art community.
+Connect with other artists and view their galleries.
 
-Things you may want to cover:
+This web-application is meant to be your own personal portfolio to show off your artistic abilities to others and recieve more exposure in an industry that has a lot of unnamed talent.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tech Used:
+-Ruby on Rails
+-HTML
+-CSS
+-JavaScript
+-Bootstrap
+-Paperclip
+-Bcrypt
